@@ -5,6 +5,7 @@ import styles from './Navigation.module.css';
 
 export default function Navigation() {
     const [theme, setTheme] = useState('dark');
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
         const savedTheme = localStorage.getItem('theme') || 'dark';
@@ -30,11 +31,27 @@ export default function Navigation() {
     return (
         <nav className={styles.nav}>
             <div className={styles.logo}>
-                <Link href="/">INFLUENCE CITY</Link>
+                <Link href="/" onClick={() => setIsMenuOpen(false)}>INFLUENCE CITY</Link>
             </div>
-            <div className={styles.links}>
+
+            <button
+                className={`${styles.burger} ${isMenuOpen ? styles.burgerActive : ''}`}
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                aria-label="Toggle Menu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div className={`${styles.links} ${isMenuOpen ? styles.linksOpen : ''}`}>
                 {links.map((link) => (
-                    <Link key={link.href} href={link.href} className={styles.link}>
+                    <Link
+                        key={link.href}
+                        href={link.href}
+                        className={styles.link}
+                        onClick={() => setIsMenuOpen(false)}
+                    >
                         {link.label}
                     </Link>
                 ))}
@@ -46,6 +63,8 @@ export default function Navigation() {
                     {theme === 'dark' ? 'LIGHT' : 'DARK'}
                 </button>
             </div>
+
+            {isMenuOpen && <div className={styles.overlay} onClick={() => setIsMenuOpen(false)} />}
         </nav>
     );
 }

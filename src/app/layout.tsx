@@ -1,5 +1,6 @@
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/layout/Footer';
+import BackToTop from '@/components/ui/BackToTop';
 import './globals.css';
 
 export const metadata = {
@@ -13,6 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <body>
                 <Navigation />
                 {children}
+                <BackToTop />
                 <Footer />
             </body>
         </html>
