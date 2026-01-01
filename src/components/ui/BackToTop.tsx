@@ -1,9 +1,11 @@
 'use client';
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import styles from './BackToTop.module.css';
 
 export default function BackToTop() {
     const [isVisible, setIsVisible] = useState(false);
+    const pathname = usePathname();
 
     useEffect(() => {
         const toggleVisibility = () => {
@@ -25,7 +27,7 @@ export default function BackToTop() {
         });
     };
 
-    if (!isVisible) return null;
+    if (!isVisible || pathname === '/') return null;
 
     return (
         <button

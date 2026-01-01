@@ -39,6 +39,16 @@
     margin-bottom: 1rem;
 }
 
+@media (max-width: 768px) {
+    .impactValue {
+        font-size: 3rem;
+    }
+
+    .impactCell {
+        padding: 2.5rem 2rem;
+    }
+}
+
 .impactLabel {
     font-size: 1.25rem;
     font-weight: 800;
