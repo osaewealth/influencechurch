@@ -1,0 +1,74 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 var(--page-margin);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    overflow: hidden;
+    transition: background var(--transition-normal), color var(--transition-normal);
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--bg-primary) 0%, transparent 100%),
+        url('/images/hero-bg.png') center/cover;
+    opacity: 0.4;
+    z-index: 0;
+    transition: background var(--transition-normal);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+}
+
+.headline {
+    margin-bottom: 2rem;
+}
+
+.mainText {
+    display: block;
+}
+
+.subheadline {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-weight: 500;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    color: var(--text-primary);
+    opacity: 0.8;
+    text-transform: none;
+    transition: color var(--transition-normal);
+}
+
+.cta {
+    display: flex;
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero::after {
+        width: 100%;
+        opacity: 0.2;
+    }
+
+    .cta {
+        flex-direction: column;
+        width: 100%;
+    }
+}

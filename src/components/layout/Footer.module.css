@@ -1,0 +1,89 @@
+.footer {
+    padding: 8rem var(--page-margin) 4rem;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-top: 1px solid var(--border-primary);
+    transition: all var(--transition-normal);
+}
+
+.logo {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 950;
+    margin-bottom: 4rem;
+    color: var(--color-gold);
+    letter-spacing: -0.05em;
+}
+
+.connectSection {
+    margin-bottom: 6rem;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.stayConnected {
+    font-size: 1.25rem;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    margin-bottom: 3rem;
+    color: var(--text-primary);
+    opacity: 0.6;
+}
+
+.contactGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    margin: 0 auto;
+}
+
+.contactItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.label {
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    color: var(--color-gold);
+}
+
+.value {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: opacity var(--transition-fast);
+}
+
+.value:hover {
+    opacity: 0.6;
+}
+
+.tagline {
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 4rem;
+    letter-spacing: 0.1em;
+    opacity: 0.4;
+}
+
+.copyright {
+    font-size: 0.75rem;
+    opacity: 0.3;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+@media (max-width: 768px) {
+    .contactGrid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

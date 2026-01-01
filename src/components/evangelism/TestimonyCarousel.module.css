@@ -1,0 +1,52 @@
+.section {
+    padding: var(--section-spacing) var(--page-margin);
+    background: var(--color-white);
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    border-left: 12px solid var(--color-black);
+    padding-left: 2rem;
+}
+
+.card {
+    background: var(--color-off-white);
+    padding: 5rem 4rem;
+    border: 1px solid var(--color-black);
+    position: relative;
+    max-width: 900px;
+}
+
+.text {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+    color: var(--color-black);
+}
+
+.name {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-gold);
+    text-transform: uppercase;
+}
+
+.btn {
+    position: absolute;
+    bottom: -2rem;
+    right: 4rem;
+    padding: 1.5rem 3rem;
+    background: var(--color-black);
+    color: var(--color-white);
+    font-weight: 900;
+    border: none;
+    cursor: pointer;
+    transition: background var(--transition-fast);
+}
+
+.btn:hover {
+    background: var(--color-gold);
+    color: var(--color-black);
+}

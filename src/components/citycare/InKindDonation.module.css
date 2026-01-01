@@ -1,0 +1,106 @@
+.section {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    margin-bottom: 10rem;
+    transition: all var(--transition-normal);
+}
+
+.left {
+    background: var(--bg-surface);
+    padding: 4rem;
+    border: 4px solid var(--text-primary);
+    box-shadow: var(--card-shadow);
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--text-primary);
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.itemBtn {
+    padding: 1.5rem 2rem;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 2px solid var(--border-primary);
+    font-weight: 800;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.itemBtn:hover,
+.active {
+    background: var(--color-gold);
+    color: #000;
+    border-color: #000;
+    transform: translateY(-4px);
+}
+
+.preview {
+    margin-top: 2rem;
+    padding: 3rem;
+    background: var(--bg-secondary);
+    border-left: 12px solid var(--color-gold);
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--text-primary);
+}
+
+.card {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all var(--transition-normal);
+}
+
+.card h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--bg-primary);
+}
+
+.card p {
+    font-size: 1.25rem;
+    opacity: 0.8;
+    margin-bottom: 3rem;
+}
+
+.whatsappBtn {
+    width: 100%;
+    padding: 1.5rem;
+    background: var(--color-gold);
+    color: #000;
+    font-weight: 900;
+    font-size: 1.125rem;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all var(--transition-fast);
+}
+
+.whatsappBtn:hover {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+@media (max-width: 1024px) {
+    .section {
+        grid-template-columns: 1fr;
+    }
+}

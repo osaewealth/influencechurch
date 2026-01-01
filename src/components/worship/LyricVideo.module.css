@@ -1,0 +1,47 @@
+.section {
+    padding: var(--section-spacing) var(--page-margin);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transition: all var(--transition-normal);
+}
+
+.nowPlaying {
+    font-size: 1.25rem;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    color: var(--color-gold);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.videoPlayer {
+    max-width: 1200px;
+    background: var(--text-primary);
+    padding: 1rem;
+    border: 4px solid var(--text-primary);
+    box-shadow: 20px 20px 0px var(--color-gold);
+    transition: all var(--transition-normal);
+}
+
+.aspectRatio {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
+}
+
+.iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .videoPlayer {
+        padding: 0.5rem;
+        box-shadow: 10px 10px 0px var(--color-gold);
+    }
+}
