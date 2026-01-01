@@ -1,3 +1,4 @@
+/* Base Styles */
 .section {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
@@ -99,8 +100,48 @@
     color: var(--text-primary);
 }
 
+/* Mobile Overrides */
 @media (max-width: 1024px) {
     .section {
         grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 5rem;
+    }
+
+    .left,
+    .card {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .items {
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .itemBtn {
+        width: 100% !important;
+        padding: 1rem;
+        font-size: 0.75rem;
+    }
+
+    .preview {
+        padding: 1.5rem;
+        font-size: 1.25rem;
+    }
+
+    .card h3 {
+        font-size: 1.5rem;
+    }
+
+    .card p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
     }
 }
