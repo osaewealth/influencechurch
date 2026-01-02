@@ -28,6 +28,7 @@
   --btn-bg: #FFFFFF;
   --btn-text: #000000;
   --nav-bg: #111111;
+  --bg-primary-rgb: 17, 17, 17;
 }
 
 [data-theme='light'] {
@@ -46,6 +47,7 @@
   --btn-bg: #000000;
   --btn-text: #FFFFFF;
   --nav-bg: #FFFFFF;
+  --bg-primary-rgb: 244, 244, 244;
 }
 
 * {

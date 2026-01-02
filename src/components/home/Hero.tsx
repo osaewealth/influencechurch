@@ -6,6 +6,7 @@ export default function Hero() {
     return (
         <section className={styles.hero}>
             <div className={styles.content}>
+                <span className={styles.churchLabel}>INFLUENCE CITY CHURCH</span>
                 <h1 className={styles.headline}>
                     <span className={styles.mainText}>A CHURCH</span>
                     <span className={styles.mainText} style={{ color: 'var(--color-gold)' }}>WITHOUT LIMITS.</span>

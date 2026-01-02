@@ -21,6 +21,7 @@ export default function Navigation() {
     };
 
     const links = [
+        { href: '/', label: 'HOME' },
         { href: '/give', label: 'GIVE' },
         { href: '/evangelism', label: 'EVANGELISM' },
         { href: '/citycare', label: 'CITY CARE' },
@@ -31,7 +32,7 @@ export default function Navigation() {
     return (
         <nav className={styles.nav}>
             <div className={styles.logo}>
-                <Link href="/" onClick={() => setIsMenuOpen(false)}>INFLUENCE CITY</Link>
+                <Link href="/" onClick={() => setIsMenuOpen(false)}>INFLUENCE CITY CHURCH</Link>
             </div>
 
             <button

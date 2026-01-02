@@ -11,14 +11,14 @@
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: 1.5rem;
-    color: var(--color-text-medium);
+    color: var(--text-secondary);
 }
 
 .barContainer {
     width: 60px;
     height: 400px;
-    background: var(--color-light-gray);
-    border: 2px solid var(--color-medium-gray);
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-primary);
     border-radius: 30px;
     position: relative;
     margin-bottom: 1.5rem;
@@ -30,8 +30,8 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background: var(--color-accent);
-    transition: height 2s ease-out;
+    background: var(--color-gold);
+    animation: fillHeight 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
 .stats {
@@ -44,11 +44,17 @@
 .stats span:first-child {
     font-size: 1rem;
     font-weight: 600;
-    color: var(--color-accent);
+    color: var(--color-gold);
 }
 
 .total {
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--color-text-dark);
+    color: var(--text-primary);
+}
+
+@keyframes fillHeight {
+    from {
+        height: 0;
+    }
 }

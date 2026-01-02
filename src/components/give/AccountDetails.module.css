@@ -1,0 +1,56 @@
+.card {
+    background: var(--bg-surface);
+    padding: 3.5rem;
+    border: 4px solid var(--text-primary);
+    box-shadow: var(--card-shadow);
+    transition: all var(--transition-normal);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-gold);
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: var(--text-primary);
+    line-height: 1.1;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--color-gold);
+    letter-spacing: 0.1em;
+}
+
+.value {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    font-family: monospace;
+}
+
+.accountName {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}

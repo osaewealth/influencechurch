@@ -7,12 +7,12 @@ export default function GoalThermometer() {
             <h3 className={styles.label}>BUILDING FUND</h3>
 
             <div className={styles.barContainer}>
-                <div className={styles.barFill} style={{ height: '68%' }} />
+                <div className={styles.barFill} style={{ height: '0.15%' } as any} />
             </div>
 
             <div className={styles.stats}>
-                <span>68% FUNDED</span>
-                <span className={styles.total}>$340K of $500K</span>
+                <span>0.15% FUNDED</span>
+                <span className={styles.total}>£150 of £100K</span>
             </div>
         </div>
     );

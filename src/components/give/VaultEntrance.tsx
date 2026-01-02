@@ -5,7 +5,7 @@ export default function VaultEntrance() {
     return (
         <section className={styles.section}>
             <div className="container">
-                <h1 className={styles.title}>FUEL THE<br /><span style={{ color: 'var(--color-gold)' }}>MISSION.</span></h1>
+                <h1 className={styles.title}>MAKE A<br /><span style={{ color: 'var(--color-gold)' }}>DONATION.</span></h1>
                 <div className={styles.content}>
                     <p className={styles.text}>
                         We aren't just building a church. We're building a movement.
