@@ -10,7 +10,7 @@ export default function GivePage() {
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
                 gap: '2rem',
-                marginTop: '4rem',
+                marginTop: '0',
                 padding: '0 var(--page-margin)',
                 marginBottom: '4rem'
             }}>
