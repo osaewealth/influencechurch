@@ -6,8 +6,10 @@ import styles from './Navigation.module.css';
 export default function Navigation() {
     const [theme, setTheme] = useState('dark');
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
+        setMounted(true);
         const savedTheme = localStorage.getItem('theme') || 'dark';
         setTheme(savedTheme);
         document.documentElement.setAttribute('data-theme', savedTheme);
@@ -27,6 +29,7 @@ export default function Navigation() {
         { href: '/citycare', label: 'CITY CARE' },
         { href: '/worship', label: 'WORSHIP' },
         { href: '/prayer', label: 'PRAYER' },
+        { href: '/visit', label: 'VISIT' },
     ];
 
     return (
@@ -61,7 +64,7 @@ export default function Navigation() {
                     className={styles.themeToggle}
                     aria-label="Toggle Theme"
                 >
-                    {theme === 'dark' ? 'LIGHT' : 'DARK'}
+                    {mounted ? (theme === 'dark' ? 'LIGHT' : 'DARK') : '...'}
                 </button>
             </div>
 

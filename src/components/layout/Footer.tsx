@@ -1,9 +1,16 @@
+import { useEffect, useState } from 'react';
 import styles from './Footer.module.css';
 
 export default function Footer() {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
     return (
         <footer className={styles.footer}>
-            <div className={styles.logo}>INFLUENCE CITY</div>
+            <div className={styles.logo}>INFLUENCE CITY CHURCH</div>
 
             <div className={styles.connectSection}>
                 <h3 className={styles.stayConnected}>STAY CONNECTED</h3>
@@ -24,7 +31,7 @@ export default function Footer() {
             </div>
 
             <p className={styles.tagline}>A CHURCH WITHOUT LIMITS.</p>
-            <p className={styles.copyright}>© {new Date().getFullYear()} Influence City Church. All rights reserved.</p>
+            <p className={styles.copyright}>© {mounted ? new Date().getFullYear() : '2026'} Influence City Church. All rights reserved.</p>
         </footer>
     );
 }

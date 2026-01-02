@@ -1,6 +1,7 @@
 import LyricVideo from '@/components/worship/LyricVideo';
 import Waveform from '@/components/worship/Waveform';
 import ChordCharts from '@/components/worship/ChordCharts';
+import LiveStream from '@/components/worship/LiveStream';
 
 export default function WorshipPage() {
     return (
@@ -18,6 +19,7 @@ export default function WorshipPage() {
                 </h1>
 
                 <Waveform />
+                <LiveStream />
                 <LyricVideo />
                 <ChordCharts />
             </div>

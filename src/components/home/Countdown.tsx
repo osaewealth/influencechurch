@@ -4,8 +4,10 @@ import { useEffect, useState } from 'react';
 
 export default function Countdown() {
     const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+    const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
+        setMounted(true);
         const calculateTimeLeft = () => {
             const now = new Date();
             const dayOfWeek = now.getDay(); // 0 = Sunday, 6 = Saturday
@@ -40,6 +42,8 @@ export default function Countdown() {
 
         return () => clearInterval(timer);
     }, []);
+
+    if (!mounted) return null;
 
     return (
         <section className={styles.container}>

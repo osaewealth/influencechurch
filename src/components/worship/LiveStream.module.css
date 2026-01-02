@@ -1,0 +1,156 @@
+.section {
+    padding: var(--section-spacing) 0;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transition: all var(--transition-normal);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.titleWrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.liveIndicator {
+    width: 12px;
+    height: 12px;
+    background: #ff0000;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ff0000;
+    animation: pulse 1.5s infinite;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    color: var(--color-gold);
+    text-transform: uppercase;
+}
+
+.streamSwitcher {
+    display: flex;
+    gap: 1rem;
+}
+
+.switchBtn {
+    padding: 0.75rem 1.5rem;
+    font-weight: 800;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border: 2px solid var(--text-primary);
+    background: transparent;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.switchBtnActive {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+}
+
+.switchBtn:hover:not(.switchBtnActive) {
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+}
+
+.fbLink {
+    background: #1877F2;
+    border-color: #1877F2;
+    color: white;
+}
+
+.fbLink:hover {
+    background: #145dbf;
+    border-color: #145dbf;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.videoPlayer {
+    max-width: 100%;
+    background: var(--text-primary);
+    padding: 1rem;
+    border: 4px solid var(--text-primary);
+    box-shadow: 20px 20px 0px var(--color-gold);
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.aspectRatio {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+}
+
+.iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.fbPlaceholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-secondary);
+    text-align: center;
+    padding: 2rem;
+}
+
+.fbPlaceholder p {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    max-width: 500px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.3);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .videoPlayer {
+        padding: 0.5rem;
+        box-shadow: 10px 10px 0px var(--color-gold);
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
