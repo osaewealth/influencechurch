@@ -31,23 +31,97 @@
 }
 
 .bar {
-    width: 12px;
+    width: 6px;
     height: 40px;
     background: var(--color-gold);
-    animation: wave 1.2s infinite alternate ease-in-out;
+    border-radius: 3px;
+    transition: background 0.3s ease;
 }
 
-@keyframes wave {
+.bar.idle {
+    animation: idleWave 2s infinite alternate ease-in-out;
+    opacity: 0.3;
+}
+
+.bar.active {
+    animation: activeWave 1.2s infinite alternate ease-in-out;
+    opacity: 1;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+@keyframes idleWave {
+    0% {
+        height: 20px;
+    }
+
+    100% {
+        height: 60px;
+    }
+}
+
+@keyframes activeWave {
     0% {
         height: 40px;
-        opacity: 0.3;
-        background: var(--color-gold-muted);
     }
 
     100% {
         height: 180px;
-        opacity: 1;
-        background: var(--color-gold);
-        box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
     }
+}
+
+.videoWrapper {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.controls {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 10;
+}
+
+.smallPlayBtn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--color-gold);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.smallPlayBtn:hover {
+    transform: scale(1.1) rotate(5deg);
+    background: var(--color-white);
+}
+
+.playIcon {
+    font-size: 1.2rem;
+    color: var(--color-black);
+    margin-left: 3px;
+}
+
+.stopIcon {
+    font-size: 1.2rem;
+    color: var(--color-black);
+}
+
+.statusText {
+    font-size: 0.65rem;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    color: var(--color-gold);
+    text-transform: uppercase;
 }
